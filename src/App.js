@@ -1,19 +1,30 @@
-import Header from './components/Header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar'; 
 import Footer from './components/Footer';
-import './App.css';
 
 function App() {
   return (
     <>
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
+      <Navbar />
+
+      {/* Only one closing </Routes> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+      </Routes>
+
       <Footer />
     </>
   );
 }
+
 export default App;
