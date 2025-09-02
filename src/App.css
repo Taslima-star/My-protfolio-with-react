@@ -28,7 +28,6 @@ footer a:hover svg {
   transition: transform 0.3s ease;
 }
 
-
 /* ==================== Home Page ==================== */
 .home-page {
   padding: 2rem;
@@ -42,15 +41,14 @@ footer a:hover svg {
 .home-page h1 {
   font-size: 3rem;
   color: #fff;
+  text-align: center;
 }
 
 .home-page p {
   font-size: 1.2rem;
   color: #ccc;
+  text-align: center;
 }
-
-
-
 
 /* ==================== Projects Page ==================== */
 .projects-page {
@@ -81,7 +79,6 @@ footer a:hover svg {
   color: #ccc;
 }
 
-
 /* ==================== Contact Page ==================== */
 .contact-page {
   background: linear-gradient(to right, #f9f9f9, #e6f0ff);
@@ -98,6 +95,7 @@ footer a:hover svg {
   font-size: 2.5rem;
   color: #1c1c7e;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .contact-form {
@@ -107,6 +105,7 @@ footer a:hover svg {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  box-sizing: border-box;
 }
 
 .contact-form input,
@@ -117,6 +116,7 @@ footer a:hover svg {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
@@ -141,7 +141,6 @@ footer a:hover svg {
   background-color: #100e61;
 }
 
-
 /* ==================== Footer ==================== */
 .footer {
   text-align: center;
@@ -150,12 +149,19 @@ footer a:hover svg {
   color: #fff;
   font-size: 0.9rem;
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer a {
   color: #f8b500;
   margin: 0 8px;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   transition: color 0.3s;
 }
 
@@ -163,6 +169,56 @@ footer a:hover svg {
   color: #fff;
 }
 
+/* ==================== Responsive Media Queries ==================== */
+@media (max-width: 768px) {
+  .home-page h1 {
+    font-size: 2.2rem;
+  }
 
+  .home-page p {
+    font-size: 1rem;
+  }
 
+  .project-title {
+    font-size: 1.3rem;
+  }
 
+  .contact-page h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-page p {
+    font-size: 0.9rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .contact-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px 10px;
+  }
+}
